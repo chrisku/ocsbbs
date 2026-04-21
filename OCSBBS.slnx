@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="API/Api.csproj" />
+  <Project Path="Auth/Auth.csproj" />
+  <Project Path="CMS/Cms.csproj" />
+  <Project Path="Core/Core.csproj" />
+  <Project Path="Dashboard/Dashboard.csproj" />
+  <Project Path="Data/Data.csproj" />
+  <Project Path="Reports/Reports.csproj" />
+  <Project Path="Web/Web.fsproj" />
+</Solution>

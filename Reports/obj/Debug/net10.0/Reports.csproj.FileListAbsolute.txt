@@ -1,0 +1,11 @@
+C:\Websites\OCSBBS\Reports\bin\Debug\net10.0\OCSBBS.Reports.deps.json
+C:\Websites\OCSBBS\Reports\bin\Debug\net10.0\OCSBBS.Reports.dll
+C:\Websites\OCSBBS\Reports\bin\Debug\net10.0\OCSBBS.Reports.pdb
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\Reports.GeneratedMSBuildEditorConfig.editorconfig
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\Reports.AssemblyInfoInputs.cache
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\Reports.AssemblyInfo.cs
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\Reports.csproj.CoreCompileInputs.cache
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\OCSBBS.Reports.dll
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\refint\OCSBBS.Reports.dll
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\OCSBBS.Reports.pdb
+C:\Websites\OCSBBS\Reports\obj\Debug\net10.0\ref\OCSBBS.Reports.dll

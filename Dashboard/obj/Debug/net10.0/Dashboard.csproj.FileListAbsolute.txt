@@ -1,0 +1,11 @@
+C:\Websites\OCSBBS\Dashboard\bin\Debug\net10.0\OCSBBS.Dashboard.deps.json
+C:\Websites\OCSBBS\Dashboard\bin\Debug\net10.0\OCSBBS.Dashboard.dll
+C:\Websites\OCSBBS\Dashboard\bin\Debug\net10.0\OCSBBS.Dashboard.pdb
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\Dashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\Dashboard.AssemblyInfoInputs.cache
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\Dashboard.AssemblyInfo.cs
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\Dashboard.csproj.CoreCompileInputs.cache
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\OCSBBS.Dashboard.dll
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\refint\OCSBBS.Dashboard.dll
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\OCSBBS.Dashboard.pdb
+C:\Websites\OCSBBS\Dashboard\obj\Debug\net10.0\ref\OCSBBS.Dashboard.dll
