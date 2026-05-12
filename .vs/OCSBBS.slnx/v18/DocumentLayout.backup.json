@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Websites\\OCSBBS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\websites\\ocsbbs\\data\\services\\cms\\hottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\services\\cms\\hottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\websites\\ocsbbs\\core\\interfaces\\cms\\ihottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\interfaces\\cms\\ihottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\websites\\ocsbbs\\data\\services\\cms\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\services\\cms\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55D69BF4-12D1-4957-97E9-71855CD6F98C}|Models\\Models.csproj|c:\\websites\\ocsbbs\\models\\cms\\bpcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55D69BF4-12D1-4957-97E9-71855CD6F98C}|Models\\Models.csproj|solutionrelative:models\\cms\\bpcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AreaService.cs",
-              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\AreaService.cs",
-              "RelativeDocumentMoniker": "Data\\Services\\Cms\\AreaService.cs",
-              "ToolTip": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\AreaService.cs",
-              "RelativeToolTip": "Data\\Services\\Cms\\AreaService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T00:00:13.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IHotTopicService.cs",
-              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Core\\Interfaces\\Cms\\IHotTopicService.cs",
-              "RelativeDocumentMoniker": "Core\\Interfaces\\Cms\\IHotTopicService.cs",
-              "ToolTip": "C:\\Websites\\OCSBBS\\Core\\Interfaces\\Cms\\IHotTopicService.cs",
-              "RelativeToolTip": "Core\\Interfaces\\Cms\\IHotTopicService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T23:58:16.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HotTopicService.cs",
-              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\HotTopicService.cs",
-              "RelativeDocumentMoniker": "Data\\Services\\Cms\\HotTopicService.cs",
-              "ToolTip": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\HotTopicService.cs",
-              "RelativeToolTip": "Data\\Services\\Cms\\HotTopicService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Title": "BpCompany.cs",
+              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Models\\Cms\\BpCompany.cs",
+              "RelativeDocumentMoniker": "Models\\Cms\\BpCompany.cs",
+              "ToolTip": "C:\\Websites\\OCSBBS\\Models\\Cms\\BpCompany.cs",
+              "RelativeToolTip": "Models\\Cms\\BpCompany.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T23:57:53.83Z",
+              "WhenOpened": "2026-05-12T04:04:58.521Z",
               "EditorCaption": ""
             }
           ]

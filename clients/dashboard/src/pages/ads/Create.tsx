@@ -96,6 +96,7 @@ const Create = () => {
             <ImageUpload
               value={form.image}
               onChange={url => setForm(prev => ({ ...prev, image: url }))}
+              subfolder="ads"
             />
           </div>
 

@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Websites\\OCSBBS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55D69BF4-12D1-4957-97E9-71855CD6F98C}|Models\\Models.csproj|c:\\websites\\ocsbbs\\models\\cms\\bpcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55D69BF4-12D1-4957-97E9-71855CD6F98C}|Models\\Models.csproj|solutionrelative:models\\cms\\bpcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BpCompany.cs",
+              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Models\\Cms\\BpCompany.cs",
+              "RelativeDocumentMoniker": "Models\\Cms\\BpCompany.cs",
+              "ToolTip": "C:\\Websites\\OCSBBS\\Models\\Cms\\BpCompany.cs",
+              "RelativeToolTip": "Models\\Cms\\BpCompany.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T04:04:58.521Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

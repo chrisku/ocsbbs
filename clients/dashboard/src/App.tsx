@@ -17,10 +17,22 @@ import ShowUserCompany from './pages/userCompanies/Show';
 import AdList from './pages/ads/Index';
 import CreateAd from './pages/ads/Create';
 import EditAd from './pages/ads/Edit';
-// Ads
+// Areas
 import AreaList from './pages/areas/Index';
 import CreateArea from './pages/areas/Create';
 import EditArea from './pages/areas/Edit';
+// BP Companies
+import BpCompanyList from './pages/bpCompanies/Index';
+import CreateBpCompany from './pages/bpCompanies/Create';
+import EditBpCompany from './pages/bpCompanies/Edit';
+// BP Contacts
+import BpContactList from './pages/bpContacts/Index';
+import CreateBpContact from './pages/bpContacts/Create';
+import EditBpContact from './pages/bpContacts/Edit';
+// Clients
+import ClientList from './pages/clients/Index';
+import CreateClient from './pages/clients/Create';
+import EditClient from './pages/clients/Edit';
 // Hot Topics
 import HotTopicList from './pages/hotTopics/Index';
 import CreateHotTopic from './pages/hotTopics/Create';
@@ -57,6 +69,18 @@ const protectedRoutes = [
   { path: '/areas',                     element: <AreaList /> },
   { path: '/areas/create',              element: <CreateArea /> },
   { path: '/areas/:id/edit',            element: <EditArea /> },  
+  // BP Companies
+  { path: '/bp-companies',              element: <BpCompanyList /> },
+  { path: '/bp-companies/create',       element: <CreateBpCompany /> },
+  { path: '/bp-companies/:id/edit',     element: <EditBpCompany /> },
+  // BP Contacts
+  { path: '/bp-contacts',              element: <BpContactList /> },
+  { path: '/bp-contacts/create',       element: <CreateBpContact /> },
+  { path: '/bp-contacts/:id/edit',     element: <EditBpContact /> },
+  // Clients
+  { path: '/clients',                   element: <ClientList /> },
+  { path: '/clients/create',            element: <CreateClient /> },
+  { path: '/clients/:id/edit',          element: <EditClient /> },
   // Hot Topics
   { path: '/hot-topics',              element: <HotTopicList /> },
   { path: '/hot-topics/create',       element: <CreateHotTopic /> },

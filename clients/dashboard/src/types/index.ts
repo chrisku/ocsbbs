@@ -151,6 +151,131 @@ export interface UpdateAreaDto {
   areaName: string;
 }
 
+// ─── Clients ───────────────────────────────────────────────────────────────
+
+export interface ClientDto {
+  id: number;
+  website: string | null;
+  businessName: string;
+  logo: string | null;
+  altTag: string | null;
+  clientOrder: number;
+  comments: string | null;
+}
+
+export interface CreateClientDto {
+  website: string | null;
+  businessName: string;
+  logo: string | null;
+  altTag: string | null;
+  clientOrder: number;
+  comments: string | null;
+}
+
+export interface UpdateClientDto {
+  website: string | null;
+  businessName: string;
+  logo: string | null;
+  altTag: string | null;
+  clientOrder: number;
+  comments: string | null;
+}
+
+// ─── BP Contacts ──────────────────────────────────────────────────────────────
+
+export interface BpContactDto {
+  id: number;
+  firstName: string;
+  middleName: string | null;
+  lastName: string;
+  department: string | null;
+  title: string | null;
+  phone: string | null;
+  fax: string | null;
+  coPhone: string | null;
+  coFax: string | null;
+  email: string;
+  photo: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+  modifiedAt: string | null;
+  bpCompanyId: number;
+  bpCompanyName: string;
+}
+
+export interface CreateBpContactDto {
+  firstName: string;
+  middleName: string | null;
+  lastName: string;
+  department: string | null;
+  title: string | null;
+  phone: string | null;
+  fax: string | null;
+  coPhone: string | null;
+  coFax: string | null;
+  email: string;
+  photo: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+  bpCompanyId: number;
+}
+
+export interface UpdateBpContactDto {
+  firstName: string;
+  middleName: string | null;
+  lastName: string;
+  department: string | null;
+  title: string | null;
+  phone: string | null;
+  fax: string | null;
+  coPhone: string | null;
+  coFax: string | null;
+  email: string;
+  photo: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+  bpCompanyId: number;
+}
+
+// ─── BP Companies ─────────────────────────────────────────────────────────────
+
+export interface BpCompanyDto {
+  id: number;
+  name: string;
+  phone: string | null;
+  fax: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+}
+
+export interface CreateBpCompanyDto {
+  name: string;
+  phone: string | null;
+  fax: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+}
+
+export interface UpdateBpCompanyDto {
+  name: string;
+  phone: string | null;
+  fax: string | null;
+  address: string | null;
+  city: string | null;
+  state: string | null;
+  zip: string | null;
+}
+
 // ─── Hot Topics ───────────────────────────────────────────────────────────────
 
 export interface HotTopicDto {

@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { AuthState, AuthLoginRequest, LoginResponse } from '../types';
+import { AuthState, AuthLoginRequest, LoginResponse } from '../../../shared/src/types';
 import { login as apiLogin, logout as apiLogout } from '../api/auth';
 
 interface AuthContextType extends AuthState {

@@ -16,6 +16,8 @@ namespace OCSBBS.Data
         // CMS
         public DbSet<Ad> Ads { get; set; }
         public DbSet<Area> Areas { get; set; }
+        public DbSet<BpCompany> BpCompanies { get; set; }
+        public DbSet<BpContact> BpContacts { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<HotTopic> HotTopics { get; set; }
 

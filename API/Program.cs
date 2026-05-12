@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using OCSBBS.Auth.Configuration;
 using OCSBBS.Auth.Services;
 using OCSBBS.Core.Interfaces.Cms;
+using OCSBBS.Data.Services.Cms;
 using OCSBBS.Core.Interfaces.Identity;
 using OCSBBS.Core.Interfaces.Infrastructure;
 using OCSBBS.Core.Interfaces.Reports;
@@ -90,6 +91,9 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 // CRM
 builder.Services.AddScoped<IAdService, AdService>();
 builder.Services.AddScoped<IAreaService, AreaService>();
+builder.Services.AddScoped<IBpCompanyService, BpCompanyService>();
+builder.Services.AddScoped<IBpContactService, BpContactService>();
+builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IHotTopicService, HotTopicService>();
 // Reports
 builder.Services.AddScoped<ICompanyOfficerService, CompanyOfficerService>();

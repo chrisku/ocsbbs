@@ -4,8 +4,11 @@ import { Avatar, Menu, MenuItem, Collapse } from '@mui/material';
 import PeopleIcon from '@mui/icons-material/People';
 import BusinessIcon from '@mui/icons-material/Business';
 import ArticleIcon from '@mui/icons-material/Article';
+import StoreIcon from '@mui/icons-material/Store';
 import ImageIcon from '@mui/icons-material/Image';
 import MapIcon from '@mui/icons-material/Map';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import ContactsIcon from '@mui/icons-material/Contacts';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -37,6 +40,7 @@ const getNavItems = (roles: string[]): NavItem[] => {
       icon: <ArticleIcon fontSize="small" />,
       children: [
         { label: 'Ads',          path: '/ads',          icon: <ImageIcon fontSize="small" /> },
+        { label: 'Clients', path: '/clients', icon: <StoreIcon fontSize="small" /> },
         { label: 'Hot Topics', path: '/hot-topics', icon: <ArticleIcon fontSize="small" /> },
       ],
     });
@@ -47,7 +51,9 @@ const getNavItems = (roles: string[]): NavItem[] => {
       label: 'Gulf Data',
       icon: <ArticleIcon fontSize="small" />,
       children: [
-        { label: 'Areas',          path: '/areas',          icon: <MapIcon fontSize="small" /> },
+        { label: 'Areas',        path: '/areas',        icon: <MapIcon fontSize="small" /> },
+        { label: 'BP Companies', path: '/bp-companies', icon: <ApartmentIcon fontSize="small" /> },
+        { label: 'BP Contacts',  path: '/bp-contacts',  icon: <ContactsIcon fontSize="small" /> },
       ],
     });
   }

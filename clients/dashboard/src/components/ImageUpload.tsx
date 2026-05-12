@@ -1,16 +1,16 @@
 import { useRef, useState } from 'react';
 import { uploadFile } from '../api/files';
 
-
 interface Props {
-  value:    string;
-  onChange: (url: string) => void;
+  value:      string;
+  onChange:   (url: string) => void;
+  subfolder?: string;
 }
 
-const ImageUpload = ({ value, onChange }: Props) => {
-  const inputRef             = useRef<HTMLInputElement>(null);
-  const [uploading, setUploading] = useState(false);
-  const [error, setError]    = useState<string | null>(null);
+const ImageUpload = ({ value, onChange, subfolder }: Props) => {
+  const inputRef                   = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading]  = useState(false);
+  const [error, setError]          = useState<string | null>(null);
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -19,7 +19,7 @@ const ImageUpload = ({ value, onChange }: Props) => {
     setError(null);
     setUploading(true);
     try {
-      const url = await uploadFile(file);
+      const url = await uploadFile(file, subfolder);
       onChange(url);
     } catch {
       setError('Upload failed. Please try again.');
