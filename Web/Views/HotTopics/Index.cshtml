@@ -1,0 +1,35 @@
+﻿@using OCSBBS.Core.DTOs
+@using OCSBBS.Core.DTOs.Cms
+@model PagedResult<HotTopicDto>
+
+@{
+    ViewData["Title"] = "Hot Topics";
+}
+
+<div class="container">
+    <h1>Hot Topics</h1>
+
+    @foreach (var topic in Model.Items)
+    {
+        <article class="hot-topic">
+            <h2>
+                @if (!string.IsNullOrEmpty(topic.Url))
+                {
+                    <a href="@topic.Url" target="_blank" rel="noopener">@topic.Title</a>
+                }
+                else
+                {
+                    <a asp-controller="HotTopics" asp-action="Details" asp-route-id="@topic.Id">@topic.Title</a>
+                }
+            </h2>
+            <p class="date">@topic.PublishedDate.ToString("MMMM dd, yyyy")</p>
+            <div class="body">
+                @Html.Raw(topic.Body.Length > 200 ? topic.Body.Substring(0, 200) + "..." : topic.Body)
+            </div>
+            @if (string.IsNullOrEmpty(topic.Url))
+            {
+                <a asp-controller="HotTopics" asp-action="Details" asp-route-id="@topic.Id">Read More →</a>
+            }
+        </article>
+    }
+</div>

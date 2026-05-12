@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using OCSBBS.Core.DTOs;
-using OCSBBS.Core.Interfaces;
+using OCSBBS.Core.Enums;
+using OCSBBS.Core.DTOs.Identity;
+using OCSBBS.Core.Interfaces.Identity;
 
 namespace OCSBBS.Api.Controllers
 {
@@ -21,9 +22,10 @@ namespace OCSBBS.Api.Controllers
         public async Task<IActionResult> GetUsers(
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 25,
-            [FromQuery] string? search = null)
+            [FromQuery] string? search = null,
+            [FromQuery] UserFilter filter = UserFilter.All)
         {
-            var result = await _userService.GetUsersAsync(page, pageSize, search);
+            var result = await _userService.GetUsersAsync(page, pageSize, search, filter);
             return Ok(result);
         }
 

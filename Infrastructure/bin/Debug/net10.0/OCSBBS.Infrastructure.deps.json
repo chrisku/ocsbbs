@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "OCSBBS.Infrastructure/1.0.0": {
+        "runtime": {
+          "OCSBBS.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OCSBBS.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

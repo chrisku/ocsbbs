@@ -1,13 +1,16 @@
 import apiClient from './client';
 import { User, PagedResult, CreateUserDto, UpdateUserDto } from '../types';
 
+export type UserFilter = 'All' | 'Active' | 'Inactive' | 'FinancialAssurance' | 'Employees' | 'LawFirm';
+
 export const getUsers = async (
   page: number = 1,
   pageSize: number = 25,
-  search?: string
+  search?: string,
+  filter: UserFilter = 'All'
 ): Promise<PagedResult<User>> => {
   const response = await apiClient.get<PagedResult<User>>('/users', {
-    params: { page, pageSize, search }
+    params: { page, pageSize, search, filter }
   });
   return response.data;
 };

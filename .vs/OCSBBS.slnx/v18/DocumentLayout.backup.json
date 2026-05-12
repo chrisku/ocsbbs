@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Websites\\OCSBBS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\websites\\ocsbbs\\data\\services\\cms\\hottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\services\\cms\\hottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\websites\\ocsbbs\\core\\interfaces\\cms\\ihottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\interfaces\\cms\\ihottopicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\websites\\ocsbbs\\data\\services\\cms\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\services\\cms\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AreaService.cs",
+              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\AreaService.cs",
+              "RelativeDocumentMoniker": "Data\\Services\\Cms\\AreaService.cs",
+              "ToolTip": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\AreaService.cs",
+              "RelativeToolTip": "Data\\Services\\Cms\\AreaService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T00:00:13.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IHotTopicService.cs",
+              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Core\\Interfaces\\Cms\\IHotTopicService.cs",
+              "RelativeDocumentMoniker": "Core\\Interfaces\\Cms\\IHotTopicService.cs",
+              "ToolTip": "C:\\Websites\\OCSBBS\\Core\\Interfaces\\Cms\\IHotTopicService.cs",
+              "RelativeToolTip": "Core\\Interfaces\\Cms\\IHotTopicService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T23:58:16.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HotTopicService.cs",
+              "DocumentMoniker": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\HotTopicService.cs",
+              "RelativeDocumentMoniker": "Data\\Services\\Cms\\HotTopicService.cs",
+              "ToolTip": "C:\\Websites\\OCSBBS\\Data\\Services\\Cms\\HotTopicService.cs",
+              "RelativeToolTip": "Data\\Services\\Cms\\HotTopicService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T23:57:53.83Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

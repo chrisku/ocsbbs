@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using OCSBBS.Core.Entities;
+using OCSBBS.Models.Identity;
 
 namespace OCSBBS.Data
 {

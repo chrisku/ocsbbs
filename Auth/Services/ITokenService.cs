@@ -1,4 +1,4 @@
-﻿using OCSBBS.Core.Entities;
+﻿using OCSBBS.Models.Identity;
 
 namespace OCSBBS.Auth.Services
 {

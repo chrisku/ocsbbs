@@ -1,10 +1,10 @@
 <Solution>
   <Project Path="API/Api.csproj" />
   <Project Path="Auth/Auth.csproj" />
-  <Project Path="CMS/Cms.csproj" />
   <Project Path="Core/Core.csproj" />
-  <Project Path="Dashboard/Dashboard.csproj" />
   <Project Path="Data/Data.csproj" />
-  <Project Path="Reports/Reports.csproj" />
-  <Project Path="Web/Web.fsproj" />
+  <Project Path="Infrastructure/Infrastructure.csproj" Id="4bc55578-aa02-4803-ac8d-e99eac1f8f11" />
+  <Project Path="Models/Models.csproj" Id="55d69bf4-12d1-4957-97e9-71855cd6f98c" />
+  <Project Path="Web/Web.csproj" Id="342e18b2-0db5-49f7-9ee4-b6d09bf4065c" />
+  <Project Path="WebFa/WebFa.csproj" Id="3ff980d1-6ec5-4492-8ed5-a249212d34ee" />
 </Solution>

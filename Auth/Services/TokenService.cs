@@ -1,11 +1,11 @@
-﻿using OCSBBS.Auth.Models;
-using OCSBBS.Auth.Services;
-using OCSBBS.Core.Entities;
+﻿using OCSBBS.Auth.Services;
+using OCSBBS.Models.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using OCSBBS.Auth.Configuration;
 
 namespace OCSBBS.Auth.Services
 {

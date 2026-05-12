@@ -2,18 +2,21 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using OCSBBS.Auth.Models;
+using OCSBBS.Auth.Configuration;
 using OCSBBS.Auth.Services;
-using OCSBBS.Core.Entities;
-using OCSBBS.Core.Interfaces;
+using OCSBBS.Core.Interfaces.Cms;
+using OCSBBS.Core.Interfaces.Identity;
+using OCSBBS.Core.Interfaces.Infrastructure;
+using OCSBBS.Core.Interfaces.Reports;
+using OCSBBS.Models.Identity;
 using OCSBBS.Data;
 using OCSBBS.Data.Services;
+using OCSBBS.Data.Services.Identity;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // DB Context
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -51,6 +54,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserCompanyService, UserCompanyService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -76,12 +80,25 @@ builder.Services.AddCors(options =>
     });
 });
 
-var app = builder.Build();
 
+// Email Settings
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+// Email Service
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+// CRM
+builder.Services.AddScoped<IAdService, AdService>();
+builder.Services.AddScoped<IAreaService, AreaService>();
+builder.Services.AddScoped<IHotTopicService, HotTopicService>();
+// Reports
+builder.Services.AddScoped<ICompanyOfficerService, CompanyOfficerService>();
+builder.Services.AddScoped<ICompanyQualificationService, CompanyQualificationService>();
+
+var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 // Configure the HTTP request pipeline.
@@ -89,10 +106,33 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+// File Uploads
+app.UseStaticFiles(); // serves wwwroot
 
-app.UseHttpsRedirection();
+app.UseExceptionHandler(errorApp =>
+{
+    errorApp.Run(async context =>
+    {
+        context.Response.StatusCode = 500;
+        context.Response.ContentType = "application/json";
+        var error = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>();
+        if (error != null)
+        {
+            await context.Response.WriteAsJsonAsync(new
+            {
+                message = error.Error.Message,
+                detail = error.Error.StackTrace
+            });
+        }
+    });
+});
 
 app.UseCors("AllowClients");
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthentication();
 app.UseAuthorization();

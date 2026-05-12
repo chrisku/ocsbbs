@@ -1,0 +1,32 @@
+﻿@using OCSBBS.Core.DTOs.Cms
+@model HotTopicDto
+
+@{
+    ViewData["Title"] = Model.TitleTag.Length > 0 ? Model.TitleTag : Model.Title;
+}
+
+@section Head {
+    @if (!string.IsNullOrEmpty(Model.MetaDescription))
+    {
+        <meta name="description" content="@Model.MetaDescription" />
+    }
+}
+
+<div class="container">
+    <a asp-controller="HotTopics" asp-action="Index">← Back to Hot Topics</a>
+
+    <article>
+        <h1>@Model.Title</h1>
+        <p class="date">@Model.PublishedDate.ToString("MMMM dd, yyyy")</p>
+        <div class="body">
+            @Html.Raw(Model.Body)
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.Url))
+        {
+            <p>
+                <a href="@Model.Url" target="_blank" rel="noopener">View External Resource →</a>
+            </p>
+        }
+    </article>
+</div>

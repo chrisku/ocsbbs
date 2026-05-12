@@ -1,8 +1,44 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using OCSBBS.Core.DTOs.Cms
+@model List<HotTopicDto>
+
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <h1>Welcome to OCS BBS</h1>
+
+    @if (Model.Any())
+    {
+        <section class="hot-topics">
+            <h2>Hot Topics</h2>
+            @foreach (var topic in Model)
+            {
+                <article class="hot-topic">
+                    <h3>
+                        @if (!string.IsNullOrEmpty(topic.Url))
+                        {
+                            <a href="@topic.Url" target="_blank" rel="noopener">@topic.Title</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="HotTopics" asp-action="Details" asp-route-id="@topic.Id">@topic.Title</a>
+                        }
+                    </h3>
+                    <p class="date">@topic.PublishedDate.ToString("MMMM dd, yyyy")</p>
+                    <div class="body">
+                        @Html.Raw(topic.Body.Length > 200 ? topic.Body.Substring(0, 200) + "..." : topic.Body)
+                    </div>
+                    @if (string.IsNullOrEmpty(topic.Url))
+                    {
+                        <a asp-controller="HotTopics" asp-action="Details" asp-route-id="@topic.Id">Read More</a>
+                    }
+                </article>
+            }
+        </section>
+    }
+    else
+    {
+        <p>No hot topics at this time.</p>
+    }
 </div>

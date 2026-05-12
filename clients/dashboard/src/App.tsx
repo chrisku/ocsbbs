@@ -1,121 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './contexts/AuthContext';
+import Layout from './components/Layout';
+// Identity
+import LoginPage from './pages/auth/LoginPage';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import ResetPassword from './pages/auth/ResetPassword';
+// Dashboard
+import Home from './pages/Home';
+// Users / User Companies
+import UserList from './pages/users/Index';
+import CreateUser from './pages/users/Create';
+import EditUser from './pages/users/Edit';
+import UserCompaniesList from './pages/userCompanies/Index';
+import ShowUserCompany from './pages/userCompanies/Show';
+// Ads
+import AdList from './pages/ads/Index';
+import CreateAd from './pages/ads/Create';
+import EditAd from './pages/ads/Edit';
+// Ads
+import AreaList from './pages/areas/Index';
+import CreateArea from './pages/areas/Create';
+import EditArea from './pages/areas/Edit';
+// Hot Topics
+import HotTopicList from './pages/hotTopics/Index';
+import CreateHotTopic from './pages/hotTopics/Create';
+import EditHotTopic from './pages/hotTopics/Edit';
 
-function App() {
-  const [count, setCount] = useState(0)
+// ── Guards ────────────────────────────────────────────────────────────────────
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
+};
 
-      <div className="ticks"></div>
+const ProtectedLayout = ({ children }: { children: React.ReactNode }) => (
+  <ProtectedRoute>
+    <Layout>{children}</Layout>
+  </ProtectedRoute>
+);
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+// ── Route config ──────────────────────────────────────────────────────────────
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
+const protectedRoutes = [
+  // Users
+  { path: '/users',                   element: <UserList /> },
+  { path: '/users/create',            element: <CreateUser /> },
+  { path: '/users/:id/edit',          element: <EditUser /> },
+  // User Companies
+  { path: '/user-companies',          element: <UserCompaniesList /> },
+  { path: '/user-companies/:id/show', element: <ShowUserCompany /> },
+  // Ads
+  { path: '/ads',                     element: <AdList /> },
+  { path: '/ads/create',              element: <CreateAd /> },
+  { path: '/ads/:id/edit',            element: <EditAd /> },
+  // Areas
+  { path: '/areas',                     element: <AreaList /> },
+  { path: '/areas/create',              element: <CreateArea /> },
+  { path: '/areas/:id/edit',            element: <EditArea /> },  
+  // Hot Topics
+  { path: '/hot-topics',              element: <HotTopicList /> },
+  { path: '/hot-topics/create',       element: <CreateHotTopic /> },
+  { path: '/hot-topics/:id/edit',     element: <EditHotTopic /> },
+];
 
-export default App
+// ── App ───────────────────────────────────────────────────────────────────────
+
+const App = () => (
+  <Routes>
+    {/* Public */}
+    <Route path="/login"           element={<LoginPage />} />
+    <Route path="/forgot-password" element={<ForgotPassword />} />
+    <Route path="/reset-password"  element={<ResetPassword />} />
+
+    {/* Home */}
+    <Route path="/" element={<ProtectedLayout><Home /></ProtectedLayout>} />
+
+    {/* Protected */}
+    {protectedRoutes.map(({ path, element }) => (
+      <Route key={path} path={path} element={<ProtectedLayout>{element}</ProtectedLayout>} />
+    ))}
+
+    {/* Fallback */}
+    <Route path="/*" element={<ProtectedRoute><Navigate to="/" /></ProtectedRoute>} />
+  </Routes>
+);
+
+export default App;
